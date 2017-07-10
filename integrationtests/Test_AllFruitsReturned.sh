@@ -8,3 +8,4 @@ then
 else
 	echo TESTRESULT: FAIL Expected $expectedResult but was $actualResult
 fi
+
