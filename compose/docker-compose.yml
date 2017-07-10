@@ -1,0 +1,16 @@
+version: "3"
+services:
+    tomcatservice:
+        image: citestserviceimage
+        depends_on: 
+            - mariadbservice
+        ports:
+            - 8888:8080
+            
+    mariadbservice:
+        image: citestdatabaseimage
+        container_name: danielmariadb
+        environment: 
+            - MYSQL_ROOT_PASSWORD=root
+            - MYSQL_DATABASE=fruitdb
+        
